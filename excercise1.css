@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 3px;
+}
+
+main {
+  height: 8rem;
+}
+
+header {
+  background-color: rgb(49, 0, 128);
+  height: 4rem;
+}
+
+section {
+  background-color: rgb(226, 43, 226);
+  height: 3rem;
+  width: 95%;
+  align-self: center;
+}
+
+aside {
+  background-color: pink;
+  height: 6rem;
+  width: 95%;
+  align-self: center;
+}
+
+footer {
+  background-color: rgb(182, 182, 154);
+  height: 5rem;
+}
