@@ -11,29 +11,99 @@ body {
 }
 
 main {
-  height: 8rem;
+  height: 10rem;
 }
 
-header {
+.myheader {
   background-color: rgb(49, 0, 128);
   height: 4rem;
 }
 
-section {
+.sidomeny {
   background-color: rgb(226, 43, 226);
   height: 3rem;
   width: 95%;
   align-self: center;
 }
 
-aside {
+.largeside {
   background-color: pink;
   height: 6rem;
   width: 95%;
   align-self: center;
 }
 
-footer {
+.foot {
   background-color: rgb(182, 182, 154);
   height: 5rem;
+  width: 98%;
+  align-self: center;
 }
+
+@media screen and (min-width: 768px) {
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    display: grid;
+    background-color: rgb(218, 235, 247);
+    grid-template-columns: 20fr 50fr 20fr;
+    grid-template-rows: 10fr 10fr 10fr 10fr 10fr 10fr 10fr;
+
+    align-items: stretch;
+    justify-items: stretch;
+    gap: 1rem;
+  }
+
+  main {
+    grid-area: middle;
+    grid-column-start: 2;
+    grid-column-end: span1;
+    grid-row-end: 2;
+    grid-row-end: span5;
+  }
+
+  .myheader {
+    background-color: rgb(49, 0, 128);
+    height: 200px;
+    grid-column-start: 1;
+    grid-column-end: span3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  .sidomeny {
+    background-color: rgb(226, 43, 226);
+    height: auto;
+
+    align-self: stretch;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  .largeside {
+    background-color: pink;
+    height: auto;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: span 5;
+
+    align-self: stretch;
+  }
+
+  .foot {
+    background-color: rgb(182, 182, 154);
+    height: 200px;
+    grid-column-start: 1;
+    grid-column-end: span3;
+    grid-row-start: 7;
+    grid-row-end: 7;
+  }
+}
+
+/*@media only screen and (orientation: landscape) {
+  body {
+    background-color: red;
+  }
+}
+  */
