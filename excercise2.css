@@ -1,11 +1,12 @@
 * {
   box-sizing: border-box;
+  
 }
 
 .header {
   display: grid;
-  grid-template-columns: 50fr 50fr;
-  grid-template-rows: 50fr 50fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 0.2rem;
 }
 
@@ -35,49 +36,54 @@
 
 .footer {
   background-color: rgb(182, 182, 154);
-  height: 14vh;
+  height: 16vh;
 
   max-width: 100%;
 }
 
 @media screen and (min-width: 768px) {
   .container {
+    
     display: grid;
-    grid-template-columns: 100fr;
-    grid-template-rows: 20fr 80fr auto;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr 1fr;
+    gap: 1rem;
+    justify-items: stretch;
+    
   }
 
   .header {
     display: flex;
     flex-direction: row;
     justify-self: center;
+
     grid-row: 1;
     gap: 1rem;
+    width: 95vw;
   }
 
   .content {
-    display: grid;
+    display: flex;
+    flex-direction: row;
 
-    grid-template-columns: 33fr 33fr 33fr;
-    grid-template-rows: auto;
     justify-self: center;
 
     grid-row: 2;
     gap: 1rem;
+    width: 95vw;
   }
 
   .smallbox {
     background-color: rgb(226, 43, 226);
-    height: 5rem;
-    width: 12rem;
-    max-width: 25%;
+    height: 14vh;
+    width: 25vw;
+    max-width: 100%;
   }
 
   .largebox {
     background-color: rgb(247, 145, 179);
-    height: 18rem;
-    width: 16rem;
+    height: 60vh;
+    width: 33vw;
     min-width: fit-content;
     grid-row-start: 1;
   }
