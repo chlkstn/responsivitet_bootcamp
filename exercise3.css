@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --logo: rgb(49, 26, 75);
+  --buttons: rgb(204, 54, 167);
+  --pink: rgb(247, 156, 171);
+  --thumbnails: rgb(255, 2, 141);
+  --yellow: rgb(113, 121, 91);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.2fr 2fr 3fr 0.8fr 1fr;
+
+  gap: 4px;
+  height: 99vh;
+  margin: 0.5rem;
+}
+
+header {
+}
+
+#circle {
+  background-color: var(--logo);
+  border-radius: 90rem;
+  height: 100px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  button {
+    background-color: var(--buttons);
+
+    border: none;
+    border-radius: 4rem;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+
+  grid-row: 3;
+  gap: 4px;
+
+  figure {
+    background-color: var(--pink);
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  grid-row: 4;
+
+  figure {
+    background-color: var(--thumbnails);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+footer {
+  background-color: var(--yellow);
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
+    grid-template-rows: 1.2fr 1.5fr 2fr 2fr 1.5fr;
+    row-gap: 4rem;
+    column-gap: 1rem;
+  }
+
+  header {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+
+  #circle {
+    background-color: var(--logo);
+    border-radius: 90rem;
+    height: 120px;
+    width: 120px;
+    margin-top: 2rem;
+
+    margin-right: 90%;
+  }
+
+  nav {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    gap: 4px;
+  }
+
+  .thumbnails {
+    display: flex;
+    flex-direction: column;
+
+    grid-column-start: 4;
+
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+
+  footer {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+}
